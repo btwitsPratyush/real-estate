@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PropertyLoka - Premium Real Estate in India's Most Coveted Locations</title>
+    <meta name="description" content="PropertyLoka - Your trusted partner in luxury real estate. Discover premium properties with expert guidance and comprehensive market insights.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "RealEstateAgent",
+        "name": "PropertyLoka",
+        "description": "Premium real estate services in India",
+        "url": "https://propertyloka.com",
+        "telephone": "+91 89709 72576",
+        "foundingDate": "2022",
+        "areaServed": "India",
+        "serviceType": "Luxury Real Estate"
+    }
+    </script>
+    
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="nav-container">
+                <div class="logo">
+                    <img src="/propertyloka logo.webp" alt="PropertyLoka - Premium Real Estate" width="180" height="60">
+                </div>
+                <ul class="nav-menu" role="menubar">
+                    <li><a href="#home" role="menuitem">Home</a></li>
+                    <li><a href="#properties" role="menuitem">Properties</a></li>
+                    <li><a href="#about" role="menuitem">About</a></li>
+                    <li><a href="#resources" role="menuitem">Resources</a></li>
+                    <li><a href="#contact" role="menuitem">Contact</a></li>
+                </ul>
+                <div class="nav-actions">
+                    <div class="nav-contact">
+                        <svg class="phone-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                        </svg>
+                        <span>+91 89709 72576</span>
+                    </div>
+                    <button class="list-property-btn">List Your Property</button>
+                </div>
+                <button class="menu-toggle" aria-label="Toggle navigation menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-slider">
+            <div class="slide active" style="background-image: url('https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1')">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1')">
+                <div class="slide-overlay"></div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=1')">
+                <div class="slide-overlay"></div>
+            </div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="container">
+                <div class="hero-text">
+                    <h1>Find Your Perfect Property</h1>
+                    <p>Discover premium properties with expert guidance and comprehensive market insights</p>
+                </div>
+                
+                <!-- Advanced Search -->
+                <div class="search-container">
+                    <form class="property-search">
+                        <div class="search-tabs">
+                            <button type="button" class="tab-btn active" data-tab="buy">Buy</button>
+                            <button type="button" class="tab-btn" data-tab="rent">Rent</button>
+                            <button type="button" class="tab-btn" data-tab="sell">Sell</button>
+                        </div>
+                        
+                        <div class="search-fields">
+                            <div class="field-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" placeholder="Enter city, area, or landmark">
+                                <svg class="field-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            
+                            <div class="field-group">
+                                <label for="property-type">Property Type</label>
+                                <select id="property-type">
+                                    <option value="">All Types</option>
+                                    <option value="apartment">Apartment</option>
+                                    <option value="villa">Villa</option>
+                                    <option value="house">House</option>
+                                    <option value="plot">Plot</option>
+                                </select>
+                            </div>
+                            
+                            <div class="field-group">
+                                <label for="budget">Budget</label>
+                                <select id="budget">
+                                    <option value="">Any Budget</option>
+                                    <option value="0-50">Under ₹50L</option>
+                                    <option value="50-100">₹50L - ₹1Cr</option>
+                                    <option value="100-200">₹1Cr - ₹2Cr</option>
+                                    <option value="200+">Above ₹2Cr</option>
+                                </select>
+                            </div>
+                            
+                            <button type="submit" class="search-btn">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="11" cy="11" r="8"/>
+                                    <path d="M21 21l-4.35-4.35"/>
+                                </svg>
+                                Search
+                            </button>
+                        </div>
+                        
+                        <button type="button" class="advanced-filters">Advanced Filters</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Slider Controls -->
+        <div class="slider-controls">
+            <button class="slider-btn prev" aria-label="Previous slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M15 18l-6-6 6-6"/>
+                </svg>
+            </button>
+            <button class="slider-btn next" aria-label="Next slide">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M9 18l6-6-6-6"/>
+                </svg>
+            </button>
+        </div>
+        
+        <div class="slider-dots">
+            <button class="dot active" data-slide="0"></button>
+            <button class="dot" data-slide="1"></button>
+            <button class="dot" data-slide="2"></button>
+        </div>
+    </section>
+
+    <!-- Featured Properties -->
+    <section class="featured-properties" id="properties">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Properties</h2>
+                <p>Handpicked luxury properties in prime locations</p>
+                
+                <div class="property-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="apartment">Apartments</button>
+                    <button class="filter-btn" data-filter="villa">Villas</button>
+                    <button class="filter-btn" data-filter="house">Houses</button>
+                </div>
+                
+                <div class="sort-options">
+                    <select id="sort-properties">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest First</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="properties-grid">
+                <article class="property-card" data-category="apartment">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&dpr=1" alt="Luxury apartment in Whitefield" loading="lazy">
+                        <div class="property-badge">Featured</div>
+                        <button class="favorite-btn" aria-label="Add to favorites">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </button>
+                        <div class="property-actions">
+                            <button class="action-btn virtual-tour">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2v11z"/>
+                                    <circle cx="12" cy="13" r="4"/>
+                                </svg>
+                                Virtual Tour
+                            </button>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <h3>Prestige Lakeside Habitat</h3>
+                        <div class="property-location">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Whitefield, Bangalore</span>
+                        </div>
+                        <div class="property-price">₹2.8 Cr</div>
+                        <div class="property-details">
+                            <div class="detail-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9,22 9,12 15,12 15,22"/>
+                                </svg>
+                                <span>3 BHK</span>
+                            </div>
+                            <div class="detail-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>
+                                    <path d="M20 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                                </svg>
+                                <span>2 Bath</span>
+                            </div>
+                            <div class="detail-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <rect x="7" y="7" width="10" height="10"/>
+                                </svg>
+                                <span>3,200 sq ft</span>
+                            </div>
+                        </div>
+                        <div class="property-amenities">
+                            <span class="amenity">Swimming Pool</span>
+                            <span class="amenity">Gym</span>
+                            <span class="amenity">Security</span>
+                        </div>
+                        <div class="property-footer">
+                            <button class="view-details-btn">View Details</button>
+                            <button class="schedule-btn">Schedule Visit</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="property-card" data-category="apartment">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&dpr=1" alt="Modern apartment in Koramangala" loading="lazy">
+                        <button class="favorite-btn" aria-label="Add to favorites">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </button>
+                        <div class="property-actions">
+                            <button class="action-btn virtual-tour">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2v11z"/>
+                                    <circle cx="12" cy="13" r="4"/>
+                                </svg>
+                                Virtual Tour
+                            </button>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <h3>Brigade Millennium</h3>
+                        <div class="property-location">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Koramangala, Bangalore</span>
+                        </div>
+                        <div class="property-price">₹1.95 Cr</div>
+                        <div class="property-details">
+                            <div class="detail-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9,22 9,12 15,12 15,22"/>
+                                </svg>
+                                <span>2 BHK</span>
+                            </div>
+                            <div class="detail-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>
+                                    <path d="M20 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                                </svg>
+                                <span>2 Bath</span>
+                            </div>
+                            <div class="detail-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <rect x="7" y="7" width="10" height="10"/>
+                                </svg>
+                                <span>2,400 sq ft</span>
+                            </div>
+                        </div>
+                        <div class="property-amenities">
+                            <span class="amenity">Club House</span>
+                            <span class="amenity">Garden</span>
+                            <span class="amenity">Parking</span>
+                        </div>
+                        <div class="property-footer">
+                            <button class="view-details-btn">View Details</button>
+                            <button class="schedule-btn">Schedule Visit</button>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="property-card" data-category="villa">
+                    <div class="property-image">
+                        <img src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&dpr=1" alt="Premium villa in Indiranagar" loading="lazy">
+                        <div class="property-badge new">New</div>
+                        <button class="favorite-btn" aria-label="Add to favorites">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </button>
+                        <div class="property-actions">
+                            <button class="action-btn virtual-tour">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2v11z"/>
+                                    <circle cx="12" cy="13" r="4"/>
+                                </svg>
+                                Virtual Tour
+                            </button>
+                        </div>
+                    </div>
+                    <div class="property-info">
+                        <h3>Sobha Royal Pavilion</h3>
+                        <div class="property-location">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                            <span>Indiranagar, Bangalore</span>
+                        </div>
+                        <div class="property-price">₹4.2 Cr</div>
+                        <div class="property-details">
+                            <div class="detail-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9,22 9,12 15,12 15,22"/>
+                                </svg>
+                                <span>4 BHK</span>
+                            </div>
+                            <div class="detail-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 6V4a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v2"/>
+                                    <path d="M20 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z"/>
+                                </svg>
+                                <span>4 Bath</span>
+                            </div>
+                            <div class="detail-item">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+                                    <rect x="7" y="7" width="10" height="10"/>
+                                </svg>
+                                <span>4,800 sq ft</span>
+                            </div>
+                        </div>
+                        <div class="property-amenities">
+                            <span class="amenity">Terrace</span>
+                            <span class="amenity">Concierge</span>
+                            <span class="amenity">Spa</span>
+                        </div>
+                        <div class="property-footer">
+                            <button class="view-details-btn">View Details</button>
+                            <button class="schedule-btn">Schedule Visit</button>
+                        </div>
+                    </div>
+                </article>
+            </div>
+            
+            <div class="load-more-container">
+                <button class="load-more-btn">Load More Properties</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About PropertyLoka</h2>
+                    <p>PropertyLoka has been a trusted name in luxury real estate, specializing in connecting discerning clients with exceptional properties that reflect their aspirations and lifestyle across prime global locations.</p>
+                    <p>Our deep understanding of the real estate landscape, combined with our commitment to excellence, has made us the preferred choice for luxury property investments worldwide. We don't just sell properties; we create lasting relationships built on trust, transparency, and unmatched service.</p>
+                    
+                    <div class="company-values">
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                                    <path d="M9 12l2 2 4-4"/>
+                                </svg>
+                            </div>
+                            <div class="value-content">
+                                <h4>Trust & Transparency</h4>
+                                <p>Complete transparency in all transactions with verified property documentation</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="9" cy="7" r="4"/>
+                                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                                </svg>
+                            </div>
+                            <div class="value-content">
+                                <h4>Expert Guidance</h4>
+                                <p>Professional consultation from experienced real estate experts</p>
+                            </div>
+                        </div>
+                        
+                        <div class="value-item">
+                            <div class="value-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+                                </svg>
+                            </div>
+                            <div class="value-content">
+                                <h4>Quick Service</h4>
+                                <p>Fast and efficient service delivery with 24/7 customer support</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Properties Sold</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">₹1000+ Cr</div>
+                        <div class="stat-label">Total Value</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">95%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Client Testimonials -->
+            <div class="testimonials">
+                <h3>What Our Clients Say</h3>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">★★★★★</div>
+                            <p>"PropertyLoka's insights helped me make an informed decision on my Mumbai property investment. Their market analysis is spot-on and the content is always up-to-date."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1" alt="Rajesh Gupta" loading="lazy">
+                            <div class="author-info">
+                                <h4>Rajesh Gupta</h4>
+                                <span>Mumbai, Maharashtra</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">★★★★★</div>
+                            <p>"Excellent platform for real estate knowledge. The articles are well-researched and have guided me through multiple property purchases in Delhi NCR."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1" alt="Priya Sharma" loading="lazy">
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <span>New Delhi</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <div class="stars">★★★★★</div>
+                            <p>"PropertyLoka is my go-to resource for real estate trends. Their expert analysis and market insights have been invaluable for my investment portfolio."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=100&h=100&dpr=1" alt="Arjun Patel" loading="lazy">
+                            <div class="author-info">
+                                <h4>Arjun Patel</h4>
+                                <span>Ahmedabad, Gujarat</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="resources" id="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resources & Insights</h2>
+                <p>Stay informed with the latest market trends and expert guidance</p>
+            </div>
+            
+            <div class="resources-tabs">
+                <button class="resource-tab active" data-tab="blog">Blog</button>
+                <button class="resource-tab" data-tab="guides">Guides</button>
+                <button class="resource-tab" data-tab="reports">Market Reports</button>
+                <button class="resource-tab" data-tab="faq">FAQ</button>
+            </div>
+            
+            <div class="resources-content">
+                <!-- Blog Tab -->
+                <div class="tab-content active" id="blog">
+                    <div class="blog-grid">
+                        <article class="blog-card featured">
+                            <div class="blog-image">
+                                <img src="https://images.pexels.com/photos/1396132/pexels-photo-1396132.jpeg?auto=compress&cs=tinysrgb&w=800&h=450&dpr=1" alt="Real estate market trends" loading="lazy">
+                            </div>
+                            <div class="blog-content">
+                                <span class="blog-category">Market Analysis</span>
+                                <time datetime="2025-01-15">January 15, 2025</time>
+                                <h3>Indian Real Estate Market: Q1 2025 Growth Projections and Investment Opportunities</h3>
+                                <p>Comprehensive analysis of emerging trends in India's luxury real estate sector and key investment opportunities for the coming quarter...</p>
+                                <div class="blog-meta">
+                                    <span class="read-time">8 min read</span>
+                                    <a href="#" class="read-more">Read More</a>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                <img src="https://images.pexels.com/photos/1571453/pexels-photo-1571453.jpeg?auto=compress&cs=tinysrgb&w=400&h=225&dpr=1" alt="Investment strategies" loading="lazy">
+                            </div>
+                            <div class="blog-content">
+                                <span class="blog-category">Investment Guide</span>
+                                <time datetime="2025-01-10">January 10, 2025</time>
+                                <h4>Smart Investment Strategies for Premium Properties</h4>
+                                <p>Expert tips for maximizing returns in luxury real estate investments...</p>
+                                <div class="blog-meta">
+                                    <span class="read-time">5 min read</span>
+                                    <a href="#" class="read-more">Read More</a>
+                                </div>
+                            </div>
+                        </article>
+                        
+                        <article class="blog-card">
+                            <div class="blog-image">
+                                <img src="https://images.pexels.com/photos/323776/pexels-photo-323776.jpeg?auto=compress&cs=tinysrgb&w=400&h=225&dpr=1" alt="Home buying guide" loading="lazy">
+                            </div>
+                            <div class="blog-content">
+                                <span class="blog-category">Buyer's Guide</span>
+                                <time datetime="2025-01-05">January 5, 2025</time>
+                                <h4>Complete Guide to Buying Your First Luxury Home</h4>
+                                <p>Step-by-step process for first-time luxury home buyers...</p>
+                                <div class="blog-meta">
+                                    <span class="read-time">7 min read</span>
+                                    <a href="#" class="read-more">Read More</a>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+                
+                <!-- Guides Tab -->
+                <div class="tab-content" id="guides">
+                    <div class="guides-grid">
+                        <div class="guide-card">
+                            <div class="guide-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                                    <polyline points="9,22 9,12 15,12 15,22"/>
+                                </svg>
+                            </div>
+                            <h4>Home Buying Guide</h4>
+                            <p>Complete step-by-step guide for purchasing your dream home</p>
+                            <a href="#" class="guide-link">Download PDF</a>
+                        </div>
+                        
+                        <div class="guide-card">
+                            <div class="guide-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                                </svg>
+                            </div>
+                            <h4>Property Investment</h4>
+                            <p>Expert strategies for building a profitable real estate portfolio</p>
+                            <a href="#" class="guide-link">Download PDF</a>
+                        </div>
+                        
+                        <div class="guide-card">
+                            <div class="guide-icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+                                    <polyline points="3.27,6.96 12,12.01 20.73,6.96"/>
+                                    <line x1="12" y1="22.08" x2="12" y2="12"/>
+                                </svg>
+                            </div>
+                            <h4>Legal Documentation</h4>
+                            <p>Understanding property documents and legal requirements</p>
+                            <a href="#" class="guide-link">Download PDF</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Market Reports Tab -->
+                <div class="tab-content" id="reports">
+                    <div class="reports-grid">
+                        <div class="report-card">
+                            <h4>Q4 2024 Market Report</h4>
+                            <p>Comprehensive analysis of real estate trends and price movements</p>
+                            <div class="report-meta">
+                                <span>Published: Dec 2024</span>
+                                <span>Pages: 45</span>
+                            </div>
+                            <a href="#" class="download-btn">Download Report</a>
+                        </div>
+                        
+                        <div class="report-card">
+                            <h4>Luxury Segment Analysis</h4>
+                            <p>Deep dive into the luxury real estate market performance</p>
+                            <div class="report-meta">
+                                <span>Published: Nov 2024</span>
+                                <span>Pages: 32</span>
+                            </div>
+                            <a href="#" class="download-btn">Download Report</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- FAQ Tab -->
+                <div class="tab-content" id="faq">
+                    <div class="faq-container">
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>How do I start my property search?</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Start by defining your budget, preferred location, and property type. Use our advanced search filters to narrow down options that match your criteria.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>What documents are required for property purchase?</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Essential documents include sale deed, property card, tax receipts, NOC from society, and legal clearance certificates. Our team will guide you through the complete documentation process.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="faq-item">
+                            <button class="faq-question">
+                                <span>How is property valuation determined?</span>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6"/>
+                                </svg>
+                            </button>
+                            <div class="faq-answer">
+                                <p>Property valuation considers factors like location, amenities, market trends, comparable sales, and future development plans in the area.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>Ready to find your dream property? Contact our expert team today</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Phone</h4>
+                            <p>+91 89709 72576</p>
+                            <span>Mon-Sat 9AM-7PM</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <p>info@propertyloka.com</p>
+                            <span>24/7 Support</span>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                <circle cx="12" cy="10" r="3"/>
+                            </svg>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Office</h4>
+                            <p>MG Road, Bangalore</p>
+                            <span>Karnataka 560001</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="interest">I'm interested in</label>
+                        <select id="interest" name="interest" required>
+                            <option value="">Select an option</option>
+                            <option value="buying">Buying a property</option>
+                            <option value="selling">Selling a property</option>
+                            <option value="renting">Renting a property</option>
+                            <option value="investment">Investment opportunities</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <div class="footer-logo">
+                        <img src="/propertyloka logo.webp" alt="PropertyLoka" width="160" height="50">
+                    </div>
+                    <p>At PropertyLoka, we provide a premium WordPress property blog featuring modern design and insightful content to help you navigate the real estate landscape effortlessly.</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Follow us on Facebook">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on Instagram">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on LinkedIn">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect x="2" y="9" width="4" height="12"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                        <a href="#" aria-label="Follow us on Twitter">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#properties">Properties</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Buy Property</a></li>
+                        <li><a href="#">Sell Property</a></li>
+                        <li><a href="#">Rent Property</a></li>
+                        <li><a href="#">Property Valuation</a></li>
+                        <li><a href="#">Investment Consulting</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Newsletter</h4>
+                    <p>Subscribe to receive the latest property updates and market insights.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Enter your email" required aria-label="Email address for newsletter">
+                        <button type="submit" aria-label="Subscribe to newsletter">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 PropertyLoka. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Live Chat Widget -->
+    <div class="chat-widget">
+        <button class="chat-toggle" aria-label="Open live chat">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+        </button>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" aria-label="Back to top">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 15l-6-6-6 6"/>
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>
