@@ -1,3 +1,3 @@
-real-estate landing page for nowww
+real-estate landing page for now
 
 
